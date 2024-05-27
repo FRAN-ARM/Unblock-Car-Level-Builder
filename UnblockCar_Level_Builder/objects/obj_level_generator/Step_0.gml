@@ -28,13 +28,22 @@ switch (--generator_timer)
 					switch (_object.object_index)
 					{
 					    case obj_wall:
-					        _array_new_element = OBJECT_TYPE.WALL;
+					        _array_new_element = "Wall";
 					        break;
 					    case obj_my_car:
-					        _array_new_element = OBJECT_TYPE.MY_CAR;
+					        _array_new_element = "MyCar";
 					        break;
 					    case obj_other_cars:
-					        _array_new_element = OBJECT_TYPE.OTHER_CAR;
+					        //_array_new_element = OBJECT_TYPE.other_car;
+							if (array_contains(other.other_cars, _object))
+							{
+								_array_new_element = (array_get_index(other.other_cars, _object) + 1);
+							}
+							else
+							{
+								array_push(other.other_cars, _object);
+								_array_new_element = (array_get_index(other.other_cars, _object) + 1);
+							}
 					        break;
 					}
 				}
