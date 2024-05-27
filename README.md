@@ -6,4 +6,4 @@ Another detail is that the project must be done on console, so I made this level
 
 In the Python code, the levels are generated in a 14 x 8 array.
 
-In the generator I made, there is an object that iterates through each grid and determines if there is a wall, our car, another car or if there is an available space, and based on all that it accumulates the data and forms the array.
+In the builder, there is an object that iterates through each grid and determines if there is a wall, our car, another car or if there is an available space, and based on all that it accumulates the data and forms the array.
